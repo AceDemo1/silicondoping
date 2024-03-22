@@ -1,0 +1,45 @@
+&CONTROL
+  calculation = 'scf',
+  etot_conv_thr =   8.0000000000d-05
+  forc_conv_thr =   1.0000000000d-04
+  outdir = './out/',
+  prefix = 'Si',
+  pseudo_dir = '/home/acedemo/psudo',
+  tprnfor = .true.,
+  tstress = .true.,
+  !verbosity = 'high'
+/
+&SYSTEM
+  ibrav=2,
+  celldm(1)=10.2623466921d0,
+  nat=2,
+  ntyp=3,
+  ecutwfc=50.0d0,
+  occupations = 'smearing'
+  smearing = 'cold'
+  degauss = 0.05
+  nbnd = 24
+ 
+/
+&ELECTRONS
+  conv_thr =   1.6000000000d-09
+  electron_maxstep = 800
+  mixing_beta =   3.0000000000d-01
+/
+ATOMIC_SPECIES
+  Si 28.085500d0 Si.pbe-mt_fhi.UPF
+  B  10.811d0    B.pbe-mt_fhi.UPF
+  P  30.973762d0 P.pbe-mt_fhi.UPF
+
+ATOMIC_POSITIONS {alat}
+  P     0.0000000000d0   0.0000000000d0   0.000000000d0
+  B     0.2500000000d0   0.2500000000d0   0.2500000000d0
+  Si    0.0000000000d0   0.5000000000d0   0.5000000000d0
+  Si    0.2500000000d0   0.7500000000d0   0.7500000000d0
+  Si   -0.5000000000d0   0.0000000000d0   0.5000000000d0
+  Si   -0.2500000000d0   0.2500000000d0   0.7500000000d0
+  Si   -0.5000000000d0   0.5000000000d0   0.10000000000d0
+  Si   -0.2500000000d0   0.7500000000d0   1.25000000000d0
+
+K_POINTS {automatic}
+  5 5 5 0 0 0

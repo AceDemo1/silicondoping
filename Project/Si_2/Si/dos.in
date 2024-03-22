@@ -1,0 +1,5 @@
+&DOS
+    prefix='Si'
+    outdir='./out/'
+    fildos='Si.dos.dat'
+    /
